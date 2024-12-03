@@ -1,0 +1,37 @@
+.bookshelf-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bookshelf {
+  height: 200px; /* Hauteur fixe */
+  background-image: url('./images/wood-texture.jpg');
+  background-size: cover;
+  border: 15px solid #5D4037;
+  border-left: 0;
+  border-right: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.bookshelf::before,
+.bookshelf::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  width: 15px;
+  background-color: #5D4037;
+}
+
+.bookshelf::before {
+  left: 0;
+}
+
+.bookshelf::after {
+  right: 0;
+}
